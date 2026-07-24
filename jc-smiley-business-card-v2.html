@@ -250,25 +250,25 @@
       padding: 12px 20px;
       border-radius: 999px; /* fully rounded = pill shape */
 
-      background: var(--color-accent-soft);
+      background: var(--color-accent);
       border: 1px solid transparent;
 
       font-family: var(--font-body);
       font-size: 0.92rem;
       font-weight: 500;
-      color: var(--color-ink);
+      color: #FFFFFF;
       text-decoration: none;
 
       transition: background-color 0.2s ease, border-color 0.2s ease,
                   transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    /* Icon inside the pill inherits the accent color for a bit of contrast */
+    /* Icon inside the pill stays legible on the filled accent background */
     .contact-pill svg {
       flex: none;
       width: 18px;
       height: 18px;
-      color: var(--color-accent);
+      color: #FFFFFF;
     }
 
     .contact-pill span {
@@ -284,8 +284,14 @@
     .contact-pill:focus-visible {
       background: #fff;
       border-color: var(--color-accent);
+      color: var(--color-ink);
       transform: translateY(-2px);
       box-shadow: 0 8px 20px -8px rgba(51, 66, 47, 0.28);
+    }
+
+    .contact-pill:hover svg,
+    .contact-pill:focus-visible svg {
+      color: var(--color-accent);
     }
 
     /* Clear, visible keyboard focus state for accessibility */
