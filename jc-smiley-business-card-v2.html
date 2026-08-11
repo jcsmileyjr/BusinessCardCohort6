@@ -226,6 +226,39 @@
       opacity: 0.9;
     }
 
+    .qr-section {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0 24px;
+    }
+
+    .qr-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      padding: 8px;
+      border-radius: 16px;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 10px 22px -18px rgba(51, 66, 47, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .qr-link:hover,
+    .qr-link:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px -18px rgba(51, 66, 47, 0.38);
+    }
+
+    .qr-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+
     /* ==========================================================================
        6. CONTACT INFO — PILL STYLE (v2)
        Phone and email are each rendered as a rounded, "pill" shaped chip with
@@ -391,6 +424,24 @@
           <path d="m2 7 8.97 6.02a2 2 0 0 0 2.06 0L22 7"/>
         </svg>
         <span>jsmiley@persevere.org</span>
+      </a>
+    </section>
+
+    <section class="qr-section" aria-label="QR code with contact details">
+      <a
+        class="qr-link"
+        href="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=BEGIN%3AVCARD%0AN%3AJC%20Smiley%0AORG%3AMyVillage%0ATITLE%3ACommunity%20Support%20for%20New%20Mothers%0ATEL%3BWORK%3BVOICE%3A%2B1112223333%0AEMAIL%3BWORK%3BINTERNET%3Ajsmiley%40persevere.org%0AEND%3AVCARD"
+        target="_blank"
+        rel="noopener"
+        aria-label="Open contact details QR code"
+      >
+        <img
+          class="qr-image"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=BEGIN%3AVCARD%0AN%3AJC%20Smiley%0AORG%3AMyVillage%0ATITLE%3ACommunity%20Support%20for%20New%20Mothers%0ATEL%3BWORK%3BVOICE%3A%2B1112223333%0AEMAIL%3BWORK%3BINTERNET%3Ajsmiley%40persevere.org%0AEND%3AVCARD"
+          alt="QR code with JC Smiley contact information"
+          width="120"
+          height="120"
+        >
       </a>
     </section>
 
